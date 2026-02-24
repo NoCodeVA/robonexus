@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Technology — RoboNexus</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    .tech-pillars { display:grid; grid-template-columns:repeat(3,1fr); gap:28px; margin-bottom:80px; }
+    @media(max-width:768px){ .tech-pillars{grid-template-columns:1fr;} }
+    .tech-pillar { background:var(--bg2); border:1px solid var(--border); border-radius:16px; padding:36px; transition:all 0.3s; }
+    .tech-pillar:hover { border-color:var(--accent); box-shadow:0 12px 40px var(--glow); transform:translateY(-4px); }
+    .tp-icon { width:56px; height:56px; background:var(--surface); border:1px solid var(--border); border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:24px; margin-bottom:20px; }
+    .tech-pillar h3 { font-family:var(--font-head); font-size:16px; font-weight:600; margin-bottom:12px; }
+    .tech-pillar p { color:var(--text-muted); font-size:14px; line-height:1.7; }
+    .arch-diagram { background:var(--bg2); border:1px solid var(--border); border-radius:20px; padding:48px; position:relative; overflow:hidden; }
+    .arch-diagram::before { content:''; position:absolute; inset:0; background:linear-gradient(135deg,rgba(108,99,255,0.05),transparent); }
+    .arch-layers { display:flex; flex-direction:column; gap:16px; position:relative; z-index:1; }
+    .arch-layer { display:flex; align-items:center; gap:20px; padding:20px 24px; border-radius:12px; border:1px solid var(--border); background:var(--bg3); }
+    .arch-layer:nth-child(1) { border-color:rgba(0,212,255,0.4); }
+    .arch-layer:nth-child(2) { border-color:rgba(108,99,255,0.4); }
+    .arch-layer:nth-child(3) { border-color:rgba(0,196,140,0.4); }
+    .arch-layer:nth-child(4) { border-color:rgba(255,165,0,0.3); }
+    .layer-label { font-family:var(--font-mono); font-size:11px; letter-spacing:0.1em; text-transform:uppercase; min-width:120px; }
+    .layer-items { display:flex; gap:12px; flex-wrap:wrap; }
+    .layer-chip { background:var(--surface); border:1px solid var(--border); border-radius:6px; padding:6px 14px; font-size:13px; color:var(--text-muted); white-space:nowrap; }
+    .metrics-row { display:grid; grid-template-columns:repeat(4,1fr); gap:20px; }
+    @media(max-width:768px){ .metrics-row{grid-template-columns:repeat(2,1fr);} }
+    .metric-box { background:var(--bg2); border:1px solid var(--border); border-radius:12px; padding:28px; text-align:center; }
+    .metric-box .m-val { font-family:var(--font-head); font-size:36px; font-weight:700; color:var(--accent2); }
+    .metric-box .m-unit { font-size:14px; color:var(--text-muted); }
+    .metric-box .m-label { font-size:13px; color:var(--text-muted); margin-top:8px; }
+  </style>
+</head>
+<body>
+
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-icon"><svg width="36" height="36" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="18" r="17" stroke="#6C63FF" stroke-width="1.5"/><circle cx="18" cy="9" r="2.5" fill="#6C63FF"/><circle cx="27" cy="18" r="2.5" fill="#6C63FF" opacity="0.6"/><circle cx="18" cy="27" r="2.5" fill="#6C63FF" opacity="0.4"/><circle cx="9" cy="18" r="2.5" fill="#6C63FF" opacity="0.8"/></svg></div>
+      <span class="logo-text">RoboNexus</span>
+    </a>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown"><a href="solutions.html">Solutions ▾</a><ul class="dropdown-menu"><li><a href="solutions.html#manufacturing">Manufacturing</a></li><li><a href="solutions.html#healthcare">Healthcare</a></li><li><a href="solutions.html#logistics">Logistics</a></li></ul></li>
+      <li><a href="robots.html">Our Robots</a></li>
+      <li><a href="ai-tech.html" class="active">AI Technology</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="contact.html" class="nav-cta">Get Demo</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-content">
+    <div class="section-tag">NexusAI Platform</div>
+    <h1>The <span class="gradient-text">Brain</span> Behind Every Robot</h1>
+    <p>NexusAI is our vertically integrated AI platform — from custom silicon to cloud fleet management — built specifically for real-world robotics.</p>
+  </div>
+</div>
+
+<!-- TECH PILLARS -->
+<section style="padding:80px 0; background:var(--bg);">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Core Capabilities</div>
+      <h2>Six AI Pillars That <span class="gradient-text">Power Motion</span></h2>
+    </div>
+    <div class="tech-pillars">
+      <div class="tech-pillar">
+        <div class="tp-icon">👁</div>
+        <h3>Computer Vision</h3>
+        <p>Custom-trained vision models recognise objects, defects, and spatial environments at 120fps with sub-pixel accuracy. Works in low light, occlusion, and high-speed scenarios.</p>
+      </div>
+      <div class="tech-pillar">
+        <div class="tp-icon">🧭</div>
+        <h3>SLAM Navigation</h3>
+        <p>Simultaneous Localisation and Mapping lets robots build and update a world model in real time — navigating dynamic environments without pre-mapped layouts.</p>
+      </div>
+      <div class="tech-pillar">
+        <div class="tp-icon">🤖</div>
+        <h3>Reinforcement Learning</h3>
+        <p>Robots learn manipulation tasks through millions of simulated trials before deployment. Transfer learning adapts pre-trained skills to new tasks in hours, not months.</p>
+      </div>
+      <div class="tech-pillar">
+        <div class="tp-icon">🌐</div>
+        <h3>Fleet Intelligence</h3>
+        <p>Federated learning across the entire deployed fleet. Every robot's experience improves all others — continuously, without centralising sensitive operational data.</p>
+      </div>
+      <div class="tech-pillar">
+        <div class="tp-icon">⚡</div>
+        <h3>Edge AI Inference</h3>
+        <p>Custom NexusChip ASIC delivers 45 TOPS at 8W per robot — enabling full neural network inference onboard with 5ms end-to-end latency, no cloud dependency required.</p>
+      </div>
+      <div class="tech-pillar">
+        <div class="tp-icon">🔐</div>
+        <h3>Safety AI</h3>
+        <p>Multi-model redundant safety architecture monitors for human proximity, unexpected objects, and robot state anomalies — triggering safe stops in under 50ms.</p>
+      </div>
+    </div>
+
+    <!-- ARCHITECTURE DIAGRAM -->
+    <div class="section-header">
+      <div class="section-tag">System Architecture</div>
+      <h2>NexusAI <span class="gradient-text">Stack Overview</span></h2>
+    </div>
+    <div class="arch-diagram">
+      <div class="arch-layers">
+        <div class="arch-layer">
+          <span class="layer-label" style="color:var(--accent2)">Cloud Layer</span>
+          <div class="layer-items">
+            <div class="layer-chip">Fleet Management</div>
+            <div class="layer-chip">OTA Updates</div>
+            <div class="layer-chip">Analytics Dashboard</div>
+            <div class="layer-chip">Federated Learning Server</div>
+            <div class="layer-chip">Digital Twin</div>
+          </div>
+        </div>
+        <div class="arch-layer">
+          <span class="layer-label" style="color:var(--accent)">Edge Layer</span>
+          <div class="layer-items">
+            <div class="layer-chip">NexusChip ASIC</div>
+            <div class="layer-chip">ROS 2 Middleware</div>
+            <div class="layer-chip">Vision Models</div>
+            <div class="layer-chip">Motion Planner</div>
+            <div class="layer-chip">Safety Monitor</div>
+          </div>
+        </div>
+        <div class="arch-layer">
+          <span class="layer-label" style="color:var(--accent3)">Sensor Layer</span>
+          <div class="layer-items">
+            <div class="layer-chip">LiDAR</div>
+            <div class="layer-chip">RGB-D Cameras</div>
+            <div class="layer-chip">IMU</div>
+            <div class="layer-chip">Force/Torque</div>
+            <div class="layer-chip">Tactile Skin</div>
+            <div class="layer-chip">Thermal</div>
+          </div>
+        </div>
+        <div class="arch-layer">
+          <span class="layer-label" style="color:orange">Actuator Layer</span>
+          <div class="layer-items">
+            <div class="layer-chip">Servo Controllers</div>
+            <div class="layer-chip">Motor Drivers</div>
+            <div class="layer-chip">Hydraulic Control</div>
+            <div class="layer-chip">End Effectors</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PERFORMANCE METRICS -->
+<section style="padding:80px 0; background:var(--bg2); border-top:1px solid var(--border);">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Performance</div>
+      <h2>Numbers That <span class="gradient-text">Matter</span></h2>
+    </div>
+    <div class="metrics-row">
+      <div class="metric-box"><div class="m-val">5</div><div class="m-unit">ms</div><div class="m-label">Sensor-to-action latency</div></div>
+      <div class="metric-box"><div class="m-val">99.7</div><div class="m-unit">%</div><div class="m-label">Vision model accuracy</div></div>
+      <div class="metric-box"><div class="m-val">45</div><div class="m-unit">TOPS</div><div class="m-label">Edge AI performance</div></div>
+      <div class="metric-box"><div class="m-val">8</div><div class="m-unit">W</div><div class="m-label">NexusChip power draw</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SIMULATION -->
+<section style="padding:80px 0; background:var(--bg);">
+  <div class="container">
+    <div class="two-col">
+      <div>
+        <div class="section-tag">RoboSim Cloud</div>
+        <h2>Train in Simulation, <span class="gradient-text">Deploy with Confidence</span></h2>
+        <p>RoboSim is our physics-accurate cloud simulation environment where robots learn tasks through billions of virtual trials before touching real hardware. Domain randomisation teaches robots to handle real-world variation and unpredictability.</p>
+        <p>APIs allow integration with popular ML frameworks including PyTorch, JAX, and Stable-Baselines3. Simulation results transfer to physical robots with over 90% skill retention — no fine-tuning required.</p>
+        <ul class="ai-features">
+          <li><div class="feat-icon">🔬</div><div><strong>Physics-Accurate Engine</strong><p>Rigid body, soft body, and fluid dynamics at 10,000x real-time speed</p></div></li>
+          <li><div class="feat-icon">🎲</div><div><strong>Domain Randomisation</strong><p>Automatically vary lighting, textures, mass, and friction during training</p></div></li>
+          <li><div class="feat-icon">📡</div><div><strong>Sim-to-Real Transfer</strong><p>90%+ skill retention from simulation to physical deployment</p></div></li>
+        </ul>
+      </div>
+      <img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=600&h=500&fit=crop&auto=format" alt="AI simulation environment" loading="lazy"/>
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <div class="container">
+    <div class="cta-inner">
+      <h2>Want to Build on <span class="gradient-text">NexusAI?</span></h2>
+      <p>API access, custom model training, and OEM licensing available for partners and developers.</p>
+      <div class="cta-btns">
+        <a href="contact.html" class="btn-primary">Request API Access</a>
+        <a href="education.html" class="btn-ghost">Documentation</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand"><a href="index.html" class="logo"><div class="logo-icon"><svg width="36" height="36" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="18" r="17" stroke="#6C63FF" stroke-width="1.5"/><circle cx="18" cy="9" r="2.5" fill="#6C63FF"/><circle cx="27" cy="18" r="2.5" fill="#6C63FF" opacity="0.6"/><circle cx="18" cy="27" r="2.5" fill="#6C63FF" opacity="0.4"/><circle cx="9" cy="18" r="2.5" fill="#6C63FF" opacity="0.8"/></svg></div><span class="logo-text">RoboNexus</span></a><p>Intelligent robotics solutions that empower industries to operate safer, faster, and smarter.</p></div>
+      <div class="footer-links">
+        <div class="footer-col"><h4>Solutions</h4><ul><li><a href="solutions.html#manufacturing">Manufacturing</a></li><li><a href="solutions.html#healthcare">Healthcare</a></li><li><a href="solutions.html#logistics">Logistics</a></li></ul></div>
+        <div class="footer-col"><h4>Products</h4><ul><li><a href="robots.html">Robot Catalog</a></li><li><a href="ai-tech.html">NexusAI</a></li><li><a href="education.html">Edu Kits</a></li></ul></div>
+        <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div class="footer-col"><h4>Resources</h4><ul><li><a href="education.html">Docs</a></li><li><a href="about.html">Blog</a></li></ul></div>
+      </div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 RoboNexus Technologies.</p><div class="footer-legal"><a href="#">Privacy</a><a href="#">Terms</a></div></div>
+  </div>
+</footer>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

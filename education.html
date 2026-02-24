@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Education — RoboNexus</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    .program-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:28px; }
+    @media(max-width:768px){ .program-grid{grid-template-columns:1fr;} }
+    .program-card { background:var(--bg2); border:1px solid var(--border); border-radius:16px; padding:36px; transition:all 0.3s; }
+    .program-card:hover { border-color:var(--accent); box-shadow:0 12px 40px var(--glow); transform:translateY(-4px); }
+    .prog-level { display:inline-block; font-family:var(--font-mono); font-size:10px; letter-spacing:0.15em; text-transform:uppercase; padding:4px 12px; border-radius:4px; margin-bottom:16px; }
+    .lv-k12 { background:rgba(0,212,255,0.1); color:var(--accent2); border:1px solid rgba(0,212,255,0.3); }
+    .lv-uni { background:rgba(108,99,255,0.1); color:var(--accent); border:1px solid rgba(108,99,255,0.3); }
+    .lv-pro { background:rgba(0,196,140,0.1); color:var(--accent3); border:1px solid rgba(0,196,140,0.3); }
+    .lv-online { background:rgba(255,165,0,0.1); color:orange; border:1px solid rgba(255,165,0,0.3); }
+    .program-card h3 { font-family:var(--font-head); font-size:20px; font-weight:600; margin-bottom:12px; }
+    .program-card p { color:var(--text-muted); font-size:15px; margin-bottom:20px; line-height:1.7; }
+    .program-card ul { list-style:none; margin-bottom:24px; }
+    .program-card ul li { color:var(--text-muted); font-size:14px; padding:6px 0; border-bottom:1px solid var(--border); display:flex; gap:10px; }
+    .program-card ul li::before { content:'→'; color:var(--accent); }
+    .kit-showcase { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+    @media(max-width:768px){ .kit-showcase{grid-template-columns:1fr;} }
+    .kit-card { background:var(--bg2); border:1px solid var(--border); border-radius:12px; overflow:hidden; transition:all 0.3s; }
+    .kit-card:hover { border-color:var(--accent); transform:translateY(-4px); }
+    .kit-img { height:160px; overflow:hidden; }
+    .kit-img img { width:100%; height:100%; object-fit:cover; }
+    .kit-body { padding:20px; }
+    .kit-body h4 { font-family:var(--font-head); font-size:15px; margin-bottom:8px; }
+    .kit-body p { color:var(--text-muted); font-size:13px; }
+    .kit-price { font-family:var(--font-mono); font-size:18px; color:var(--accent); margin-top:12px; }
+  </style>
+</head>
+<body>
+
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-icon"><svg width="36" height="36" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="18" r="17" stroke="#6C63FF" stroke-width="1.5"/><circle cx="18" cy="9" r="2.5" fill="#6C63FF"/><circle cx="27" cy="18" r="2.5" fill="#6C63FF" opacity="0.6"/><circle cx="18" cy="27" r="2.5" fill="#6C63FF" opacity="0.4"/><circle cx="9" cy="18" r="2.5" fill="#6C63FF" opacity="0.8"/></svg></div>
+      <span class="logo-text">RoboNexus</span>
+    </a>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown"><a href="solutions.html">Solutions ▾</a><ul class="dropdown-menu"><li><a href="solutions.html#manufacturing">Manufacturing</a></li><li><a href="solutions.html#healthcare">Healthcare</a></li><li><a href="solutions.html#logistics">Logistics</a></li></ul></li>
+      <li><a href="robots.html">Our Robots</a></li>
+      <li><a href="ai-tech.html">AI Technology</a></li>
+      <li><a href="education.html" class="active">Education</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="contact.html" class="nav-cta">Get Demo</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-content">
+    <div class="section-tag">RoboNexus Education</div>
+    <h1>Build Tomorrow's <span class="gradient-text">Roboticists Today</span></h1>
+    <p>From curious 8-year-olds to seasoned engineers, our education platform brings hands-on AI and robotics learning to every level.</p>
+  </div>
+</div>
+
+<!-- PROGRAMS -->
+<section style="padding:80px 0; background:var(--bg);">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Learning Programs</div>
+      <h2>A Program for <span class="gradient-text">Every Level</span></h2>
+    </div>
+    <div class="program-grid">
+      <div class="program-card">
+        <span class="prog-level lv-k12">K-12 Program</span>
+        <h3>Spark: Schools Edition</h3>
+        <p>Aligned to STEM curriculum standards in 40+ countries, Spark brings robot building and AI programming to classrooms with age-appropriate hardware and lesson plans.</p>
+        <ul>
+          <li>Block-based programming for ages 8–12</li>
+          <li>Python & ROS intro for ages 13–18</li>
+          <li>Teacher training and certification</li>
+          <li>Curriculum mapped to national standards</li>
+          <li>Annual robotics competitions</li>
+        </ul>
+        <a href="contact.html" class="btn-primary">Get School Pricing</a>
+      </div>
+
+      <div class="program-card">
+        <span class="prog-level lv-uni">University Program</span>
+        <h3>NexusLab: University Edition</h3>
+        <p>Full-featured robotics lab packages for undergraduate and graduate programs, including industrial-grade robots, simulation licenses, and research API access.</p>
+        <ul>
+          <li>NX-Arm Pro for engineering labs</li>
+          <li>RoboSim cloud simulation access</li>
+          <li>NexusAI API for research</li>
+          <li>Guest lectures from our engineers</li>
+          <li>Internship pipeline for top students</li>
+        </ul>
+        <a href="contact.html" class="btn-primary">Request University Demo</a>
+      </div>
+
+      <div class="program-card">
+        <span class="prog-level lv-pro">Professional Training</span>
+        <h3>RoboNexus Certified Engineer</h3>
+        <p>Industry-recognised certification program for professionals transitioning into robotics or upskilling in AI-driven automation. Taught by our senior engineers.</p>
+        <ul>
+          <li>8-week intensive online + lab program</li>
+          <li>Hands-on project with real robot hardware</li>
+          <li>NexusAI developer certification</li>
+          <li>Job placement support</li>
+          <li>Corporate cohort pricing available</li>
+        </ul>
+        <a href="contact.html" class="btn-primary">Enrol Now</a>
+      </div>
+
+      <div class="program-card">
+        <span class="prog-level lv-online">Online Self-Paced</span>
+        <h3>RoboNexus Online Academy</h3>
+        <p>150+ hours of video content, interactive coding exercises, and cloud simulator access. Learn robotics fundamentals to advanced AI at your own pace from anywhere.</p>
+        <ul>
+          <li>Introduction to Robotics (free)</li>
+          <li>Computer Vision for Robots</li>
+          <li>Motion Planning & Control</li>
+          <li>Fleet Management & Cloud AI</li>
+          <li>Certificate on completion</li>
+        </ul>
+        <a href="contact.html" class="btn-primary">Start Free Course</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KIT SHOP -->
+<section style="padding:80px 0; background:var(--bg2); border-top:1px solid var(--border);">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Hardware Kits</div>
+      <h2>Build Real <span class="gradient-text">Robots at Home</span></h2>
+      <p>Our education kits ship with everything needed — hardware, software, and step-by-step projects.</p>
+    </div>
+    <div class="kit-showcase">
+      <div class="kit-card">
+        <div class="kit-img"><img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=160&fit=crop&auto=format" alt="Starter kit" loading="lazy"/></div>
+        <div class="kit-body">
+          <h4>Starter Kit</h4>
+          <p>5 guided projects. Block coding. Sensors & servo motors. Perfect for ages 8–12.</p>
+          <div class="kit-price">$149</div>
+        </div>
+      </div>
+      <div class="kit-card">
+        <div class="kit-img"><img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&h=160&fit=crop&auto=format" alt="Pro kit" loading="lazy"/></div>
+        <div class="kit-body">
+          <h4>Pro Kit</h4>
+          <p>Autonomous mobile robot platform. Python. LiDAR navigation. For ages 14+.</p>
+          <div class="kit-price">$449</div>
+        </div>
+      </div>
+      <div class="kit-card">
+        <div class="kit-img"><img src="https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?w=400&h=160&fit=crop&auto=format" alt="AI Vision kit" loading="lazy"/></div>
+        <div class="kit-body">
+          <h4>Vision AI Kit</h4>
+          <p>Camera module + GPU compute for training computer vision models on custom datasets.</p>
+          <div class="kit-price">$299</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- IMPACT STATS -->
+<section style="padding:80px 0; background:var(--bg);">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Our Impact</div>
+      <h2>Shaping the <span class="gradient-text">Next Generation</span></h2>
+    </div>
+    <div class="impact-grid">
+      <div class="impact-item"><div class="impact-number" data-target="2400">0</div><div class="impact-suffix">+</div><div class="impact-label">Schools using our curriculum</div></div>
+      <div class="impact-item"><div class="impact-number" data-target="180">0</div><div class="impact-suffix">+</div><div class="impact-label">University partners worldwide</div></div>
+      <div class="impact-item"><div class="impact-number" data-target="85000">0</div><div class="impact-suffix">+</div><div class="impact-label">Students trained</div></div>
+      <div class="impact-item"><div class="impact-number" data-target="47">0</div><div class="impact-suffix"></div><div class="impact-label">Countries reached</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <div class="container">
+    <div class="cta-inner">
+      <h2>Bring Robotics to <span class="gradient-text">Your Institution</span></h2>
+      <p>Bulk pricing, curriculum support, and teacher training available for schools and universities.</p>
+      <div class="cta-btns">
+        <a href="contact.html" class="btn-primary">Contact Education Team</a>
+        <a href="robots.html" class="btn-ghost">View EduBot Spark</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand"><a href="index.html" class="logo"><div class="logo-icon"><svg width="36" height="36" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="18" r="17" stroke="#6C63FF" stroke-width="1.5"/><circle cx="18" cy="9" r="2.5" fill="#6C63FF"/><circle cx="27" cy="18" r="2.5" fill="#6C63FF" opacity="0.6"/><circle cx="18" cy="27" r="2.5" fill="#6C63FF" opacity="0.4"/><circle cx="9" cy="18" r="2.5" fill="#6C63FF" opacity="0.8"/></svg></div><span class="logo-text">RoboNexus</span></a><p>Intelligent robotics solutions that empower industries to operate safer, faster, and smarter.</p></div>
+      <div class="footer-links">
+        <div class="footer-col"><h4>Solutions</h4><ul><li><a href="solutions.html#manufacturing">Manufacturing</a></li><li><a href="solutions.html#healthcare">Healthcare</a></li><li><a href="solutions.html#logistics">Logistics</a></li></ul></div>
+        <div class="footer-col"><h4>Products</h4><ul><li><a href="robots.html">Robot Catalog</a></li><li><a href="ai-tech.html">NexusAI</a></li><li><a href="education.html">Edu Kits</a></li></ul></div>
+        <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div class="footer-col"><h4>Resources</h4><ul><li><a href="education.html">Docs</a></li><li><a href="about.html">Blog</a></li></ul></div>
+      </div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 RoboNexus Technologies.</p><div class="footer-legal"><a href="#">Privacy</a><a href="#">Terms</a></div></div>
+  </div>
+</footer>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

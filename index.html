@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RoboNexus — AI-Powered Robotics for Tomorrow's Industries</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-icon">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+          <circle cx="18" cy="18" r="17" stroke="#6C63FF" stroke-width="1.5"/>
+          <circle cx="18" cy="18" r="10" stroke="#6C63FF" stroke-width="1" stroke-dasharray="3 2"/>
+          <circle cx="18" cy="9" r="2.5" fill="#6C63FF"/>
+          <circle cx="27" cy="18" r="2.5" fill="#6C63FF" opacity="0.6"/>
+          <circle cx="18" cy="27" r="2.5" fill="#6C63FF" opacity="0.4"/>
+          <circle cx="9" cy="18" r="2.5" fill="#6C63FF" opacity="0.8"/>
+          <line x1="18" y1="9" x2="27" y2="18" stroke="#6C63FF" stroke-width="1" opacity="0.5"/>
+          <line x1="27" y1="18" x2="18" y2="27" stroke="#6C63FF" stroke-width="1" opacity="0.5"/>
+          <line x1="18" y1="27" x2="9" y2="18" stroke="#6C63FF" stroke-width="1" opacity="0.5"/>
+          <line x1="9" y1="18" x2="18" y2="9" stroke="#6C63FF" stroke-width="1" opacity="0.5"/>
+        </svg>
+      </div>
+      <span class="logo-text">RoboNexus</span>
+    </a>
+
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li class="dropdown">
+        <a href="solutions.html">Solutions ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="solutions.html#manufacturing">Manufacturing</a></li>
+          <li><a href="solutions.html#healthcare">Healthcare</a></li>
+          <li><a href="solutions.html#logistics">Logistics</a></li>
+          <li><a href="solutions.html#agriculture">Agriculture</a></li>
+          <li><a href="solutions.html#construction">Construction</a></li>
+        </ul>
+      </li>
+      <li><a href="robots.html">Our Robots</a></li>
+      <li><a href="ai-tech.html">AI Technology</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="contact.html" class="nav-cta">Get Demo</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-grid-bg"></div>
+  <div class="hero-particles" id="particles"></div>
+  <div class="container" style="display:flex;align-items:center;gap:60px;padding-top:80px;padding-bottom:80px;position:relative;z-index:1;">
+  <div class="hero-content">
+    <div class="hero-badge">AI + Robotics Convergence</div>
+    <h1 class="hero-title">
+      Machines That<br/>
+      <span class="gradient-text">Think. Act. Deliver.</span>
+    </h1>
+    <p class="hero-sub">Intelligent robotic systems eliminating repetitive, dangerous, and labor-intensive tasks across industries — so humans can focus on what truly matters.</p>
+    <div class="hero-cta-group">
+      <a href="solutions.html" class="btn-primary">Explore Solutions</a>
+      <a href="robots.html" class="btn-ghost">View Our Robots →</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><span class="stat-num">500+</span><span class="stat-label">Robots Deployed</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-num">12</span><span class="stat-label">Industries Served</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-num">98%</span><span class="stat-label">Task Accuracy</span></div>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="robot-circle-outer">
+      <div class="robot-circle-inner">
+        <div class="robot-core">
+          <svg viewBox="0 0 200 200" class="robot-svg">
+            <!-- Robot Head -->
+            <rect x="60" y="30" width="80" height="65" rx="12" fill="#1a1a2e" stroke="#6C63FF" stroke-width="2"/>
+            <!-- Eyes -->
+            <rect x="75" y="48" width="18" height="12" rx="4" fill="#6C63FF" opacity="0.9"/>
+            <rect x="107" y="48" width="18" height="12" rx="4" fill="#6C63FF" opacity="0.9"/>
+            <!-- Eye glow -->
+            <rect x="77" y="50" width="14" height="8" rx="3" fill="#fff" opacity="0.3"/>
+            <rect x="109" y="50" width="14" height="8" rx="3" fill="#fff" opacity="0.3"/>
+            <!-- Mouth -->
+            <rect x="80" y="72" width="40" height="6" rx="3" fill="#6C63FF" opacity="0.6"/>
+            <!-- Antenna -->
+            <line x1="100" y1="30" x2="100" y2="15" stroke="#6C63FF" stroke-width="2"/>
+            <circle cx="100" cy="12" r="4" fill="#6C63FF"/>
+            <!-- Body -->
+            <rect x="55" y="102" width="90" height="70" rx="10" fill="#1a1a2e" stroke="#6C63FF" stroke-width="1.5"/>
+            <!-- Chest panel -->
+            <rect x="70" y="115" width="60" height="40" rx="6" fill="#0d0d1a" stroke="#6C63FF" stroke-width="1" opacity="0.8"/>
+            <rect x="75" y="120" width="50" height="4" rx="2" fill="#6C63FF" opacity="0.5"/>
+            <rect x="75" y="128" width="35" height="4" rx="2" fill="#6C63FF" opacity="0.3"/>
+            <rect x="75" y="136" width="45" height="4" rx="2" fill="#6C63FF" opacity="0.4"/>
+            <rect x="75" y="144" width="20" height="4" rx="2" fill="#00d4ff" opacity="0.6"/>
+            <!-- Arms -->
+            <rect x="25" y="105" width="25" height="50" rx="8" fill="#1a1a2e" stroke="#6C63FF" stroke-width="1.5"/>
+            <rect x="150" y="105" width="25" height="50" rx="8" fill="#1a1a2e" stroke="#6C63FF" stroke-width="1.5"/>
+            <!-- Hands -->
+            <rect x="22" y="155" width="31" height="20" rx="6" fill="#1a1a2e" stroke="#6C63FF" stroke-width="1.5"/>
+            <rect x="147" y="155" width="31" height="20" rx="6" fill="#1a1a2e" stroke="#6C63FF" stroke-width="1.5"/>
+            <!-- Legs -->
+            <rect x="68" y="172" width="28" height="22" rx="6" fill="#1a1a2e" stroke="#6C63FF" stroke-width="1.5"/>
+            <rect x="104" y="172" width="28" height="22" rx="6" fill="#1a1a2e" stroke="#6C63FF" stroke-width="1.5"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="orbit-ring ring1"><div class="orbit-dot"></div></div>
+    <div class="orbit-ring ring2"><div class="orbit-dot"></div></div>
+    <div class="orbit-ring ring3"><div class="orbit-dot"></div></div>
+  </div>
+  </div><!-- end container -->
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-bar">
+  <div class="marquee-track">
+    <span>Manufacturing Automation</span>
+    <span class="dot">●</span>
+    <span>Surgical Precision</span>
+    <span class="dot">●</span>
+    <span>Warehouse Logistics</span>
+    <span class="dot">●</span>
+    <span>Smart Agriculture</span>
+    <span class="dot">●</span>
+    <span>Construction AI</span>
+    <span class="dot">●</span>
+    <span>Autonomous Delivery</span>
+    <span class="dot">●</span>
+    <span>Hazardous Environments</span>
+    <span class="dot">●</span>
+    <span>Quality Inspection</span>
+    <span class="dot">●</span>
+    <span>Manufacturing Automation</span>
+    <span class="dot">●</span>
+    <span>Surgical Precision</span>
+    <span class="dot">●</span>
+    <span>Warehouse Logistics</span>
+    <span class="dot">●</span>
+    <span>Smart Agriculture</span>
+    <span class="dot">●</span>
+    <span>Construction AI</span>
+    <span class="dot">●</span>
+    <span>Autonomous Delivery</span>
+    <span class="dot">●</span>
+  </div>
+</div>
+
+<!-- INDUSTRIES SECTION -->
+<section class="industries" id="industries">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Industries We Serve</div>
+      <h2>Robots Replacing Risk,<br/><span class="gradient-text">Not People</span></h2>
+      <p>Our AI-driven robots handle the dirty, dangerous, and dull — freeing human potential for higher-order thinking and creativity.</p>
+    </div>
+
+    <div class="industry-grid">
+      <div class="industry-card" data-index="0">
+        <div class="card-icon">
+          <svg viewBox="0 0 64 64" fill="none">
+            <rect x="8" y="20" width="48" height="36" rx="4" stroke="currentColor" stroke-width="2"/>
+            <path d="M20 20V12a12 12 0 0124 0v8" stroke="currentColor" stroke-width="2"/>
+            <circle cx="32" cy="38" r="6" stroke="currentColor" stroke-width="2"/>
+            <path d="M32 32v-8M32 44v4M26 38H18M38 38h8" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <div class="card-img" style="background:linear-gradient(135deg,#1a0533,#2d1b69)">
+          <img src="https://images.unsplash.com/photo-1565514158740-064f34bd6cfd?w=400&h=200&fit=crop&auto=format" alt="Manufacturing robots" loading="lazy"/>
+        </div>
+        <div class="card-body">
+          <h3>Manufacturing</h3>
+          <p>Robotic arms with computer vision weld, assemble, and inspect at speeds no human can match — 24/7, zero fatigue.</p>
+          <a href="solutions.html#manufacturing" class="card-link">Learn More →</a>
+        </div>
+      </div>
+
+      <div class="industry-card" data-index="1">
+        <div class="card-icon">
+          <svg viewBox="0 0 64 64" fill="none">
+            <path d="M32 8C20 8 12 18 12 28c0 14 20 30 20 30s20-16 20-30C52 18 44 8 32 8z" stroke="currentColor" stroke-width="2"/>
+            <path d="M26 28h12M32 22v12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="card-img" style="background:linear-gradient(135deg,#0a2a1f,#0d4f3c)">
+          <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=200&fit=crop&auto=format" alt="Healthcare robotics" loading="lazy"/>
+        </div>
+        <div class="card-body">
+          <h3>Healthcare</h3>
+          <p>Surgical robots assist physicians with micron precision. AI diagnostics and pharmacy automation reduce human error to near zero.</p>
+          <a href="solutions.html#healthcare" class="card-link">Learn More →</a>
+        </div>
+      </div>
+
+      <div class="industry-card" data-index="2">
+        <div class="card-icon">
+          <svg viewBox="0 0 64 64" fill="none">
+            <rect x="8" y="32" width="48" height="20" rx="3" stroke="currentColor" stroke-width="2"/>
+            <rect x="16" y="20" width="32" height="12" rx="2" stroke="currentColor" stroke-width="2"/>
+            <path d="M32 20v-8M24 12h16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="card-img" style="background:linear-gradient(135deg,#1a1a0a,#3d3a00)">
+          <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=400&h=200&fit=crop&auto=format" alt="Logistics automation" loading="lazy"/>
+        </div>
+        <div class="card-body">
+          <h3>Logistics & Warehousing</h3>
+          <p>Autonomous mobile robots navigate warehouses, pick orders, and load vehicles — slashing fulfilment times by 80%.</p>
+          <a href="solutions.html#logistics" class="card-link">Learn More →</a>
+        </div>
+      </div>
+
+      <div class="industry-card" data-index="3">
+        <div class="card-icon">
+          <svg viewBox="0 0 64 64" fill="none">
+            <path d="M8 48l10-20 8 10 10-22 10 14 8-16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="32" cy="20" r="8" stroke="currentColor" stroke-width="2"/>
+            <path d="M32 12v-4M32 32v4M44 20h4M16 20h4" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <div class="card-img" style="background:linear-gradient(135deg,#0a1f0a,#1a4a1a)">
+          <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=400&h=200&fit=crop&auto=format" alt="Agricultural robots" loading="lazy"/>
+        </div>
+        <div class="card-body">
+          <h3>Agriculture</h3>
+          <p>Drone fleets monitor crops, AI-guided harvesters pick at optimal ripeness, and soil sensors auto-irrigate for maximum yield.</p>
+          <a href="solutions.html#agriculture" class="card-link">Learn More →</a>
+        </div>
+      </div>
+
+      <div class="industry-card" data-index="4">
+        <div class="card-icon">
+          <svg viewBox="0 0 64 64" fill="none">
+            <rect x="12" y="28" width="40" height="24" rx="3" stroke="currentColor" stroke-width="2"/>
+            <path d="M20 28V20a12 12 0 0124 0v8" stroke="currentColor" stroke-width="2"/>
+            <path d="M32 36v8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="card-img" style="background:linear-gradient(135deg,#1a0a00,#4a2a00)">
+          <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=400&h=200&fit=crop&auto=format" alt="Construction robotics" loading="lazy"/>
+        </div>
+        <div class="card-body">
+          <h3>Construction</h3>
+          <p>Robotic bricklayers, 3D concrete printers, and autonomous survey drones build faster, safer, and with less material waste.</p>
+          <a href="solutions.html#construction" class="card-link">Learn More →</a>
+        </div>
+      </div>
+
+      <div class="industry-card" data-index="5">
+        <div class="card-icon">
+          <svg viewBox="0 0 64 64" fill="none">
+            <circle cx="32" cy="32" r="20" stroke="currentColor" stroke-width="2"/>
+            <path d="M32 12v4M32 48v4M12 32h4M48 32h4" stroke="currentColor" stroke-width="2"/>
+            <circle cx="32" cy="32" r="8" fill="none" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </div>
+        <div class="card-img" style="background:linear-gradient(135deg,#00101a,#00304a)">
+          <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=400&h=200&fit=crop&auto=format" alt="Energy sector robots" loading="lazy"/>
+        </div>
+        <div class="card-body">
+          <h3>Energy & Utilities</h3>
+          <p>Inspection drones survey power lines and pipelines in hazardous zones. AI predictive maintenance stops failures before they occur.</p>
+          <a href="solutions.html" class="card-link">Learn More →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-it-works">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">The Process</div>
+      <h2>How AI-Robotics <span class="gradient-text">Actually Works</span></h2>
+    </div>
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="step-number">01</div>
+        <div class="step-icon">
+          <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="20" stroke="#6C63FF" stroke-width="2"/><path d="M16 24l6 6 10-12" stroke="#6C63FF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Sense & Perceive</h3>
+        <p>LiDAR, cameras, and tactile sensors feed real-time data into onboard AI models that build a complete picture of the environment.</p>
+      </div>
+      <div class="process-connector"><div class="connector-line"></div></div>
+      <div class="process-step">
+        <div class="step-number">02</div>
+        <div class="step-icon">
+          <svg viewBox="0 0 48 48" fill="none"><rect x="8" y="8" width="32" height="32" rx="6" stroke="#6C63FF" stroke-width="2"/><path d="M17 24h14M24 17v14" stroke="#6C63FF" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Reason & Decide</h3>
+        <p>Edge-deployed neural networks process sensor data in milliseconds, choosing optimal actions based on task context and safety parameters.</p>
+      </div>
+      <div class="process-connector"><div class="connector-line"></div></div>
+      <div class="process-step">
+        <div class="step-number">03</div>
+        <div class="step-icon">
+          <svg viewBox="0 0 48 48" fill="none"><path d="M12 36l8-16 6 8 8-18 6 10" stroke="#6C63FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Act & Execute</h3>
+        <p>Precision actuators carry out decisions with sub-millimetre accuracy — welding, picking, navigating, or assembling with zero drift.</p>
+      </div>
+      <div class="process-connector"><div class="connector-line"></div></div>
+      <div class="process-step">
+        <div class="step-number">04</div>
+        <div class="step-icon">
+          <svg viewBox="0 0 48 48" fill="none"><path d="M24 8v32M8 24h32" stroke="#6C63FF" stroke-width="2" stroke-linecap="round"/><circle cx="24" cy="24" r="6" fill="#6C63FF" opacity="0.3" stroke="#6C63FF" stroke-width="2"/></svg>
+        </div>
+        <h3>Learn & Improve</h3>
+        <p>Continuous federated learning lets the entire robot fleet share insights — every task performed makes the whole network smarter.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AI TECH HIGHLIGHT -->
+<section class="ai-highlight">
+  <div class="container ai-highlight-inner">
+    <div class="ai-text">
+      <div class="section-tag">Core Technology</div>
+      <h2>AI That Powers <span class="gradient-text">Every Move</span></h2>
+      <p>Our proprietary NexusAI platform combines computer vision, reinforcement learning, and natural language interfaces to create robots that don't just follow instructions — they understand goals.</p>
+      <ul class="ai-features">
+        <li>
+          <div class="feat-icon">⚡</div>
+          <div>
+            <strong>Real-Time Inference</strong>
+            <p>5ms latency from sensor to action using custom edge AI chips</p>
+          </div>
+        </li>
+        <li>
+          <div class="feat-icon">🧠</div>
+          <div>
+            <strong>Adaptive Learning</strong>
+            <p>Robots improve from every task without retraining from scratch</p>
+          </div>
+        </li>
+        <li>
+          <div class="feat-icon">🔒</div>
+          <div>
+            <strong>Safety-First Architecture</strong>
+            <p>ISO 10218 compliant with multi-layer collision prevention</p>
+          </div>
+        </li>
+        <li>
+          <div class="feat-icon">🌐</div>
+          <div>
+            <strong>Fleet Intelligence</strong>
+            <p>Thousands of robots coordinate as a unified, self-optimising network</p>
+          </div>
+        </li>
+      </ul>
+      <a href="ai-tech.html" class="btn-primary">Explore AI Tech</a>
+    </div>
+    <div class="ai-visual">
+      <div class="tech-diagram">
+        <img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=600&h=500&fit=crop&auto=format" alt="AI neural network visualization" loading="lazy"/>
+        <div class="tech-overlay">
+          <div class="tech-node node1">Vision AI</div>
+          <div class="tech-node node2">Path Planning</div>
+          <div class="tech-node node3">Motor Control</div>
+          <div class="tech-node node4">Fleet Sync</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- IMPACT NUMBERS -->
+<section class="impact">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Measurable Impact</div>
+      <h2>Real Results, <span class="gradient-text">Real Numbers</span></h2>
+    </div>
+    <div class="impact-grid">
+      <div class="impact-item">
+        <div class="impact-number" data-target="73">0</div>
+        <div class="impact-suffix">%</div>
+        <div class="impact-label">Reduction in Workplace Injuries</div>
+      </div>
+      <div class="impact-item">
+        <div class="impact-number" data-target="340">0</div>
+        <div class="impact-suffix">%</div>
+        <div class="impact-label">Increase in Throughput</div>
+      </div>
+      <div class="impact-item">
+        <div class="impact-number" data-target="60">0</div>
+        <div class="impact-suffix">%</div>
+        <div class="impact-label">Lower Operational Costs</div>
+      </div>
+      <div class="impact-item">
+        <div class="impact-number" data-target="18">0</div>
+        <div class="impact-suffix">mo</div>
+        <div class="impact-label">Average ROI Payback Period</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED ROBOTS -->
+<section class="robots-preview" id="robots">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Our Fleet</div>
+      <h2>Meet the <span class="gradient-text">Robots</span></h2>
+      <p>Purpose-built for industry. Engineered to endure. Powered by intelligence.</p>
+    </div>
+    <div class="robots-grid">
+      <div class="robot-card">
+        <div class="robot-card-img">
+          <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=300&fit=crop&auto=format" alt="Industrial arm robot" loading="lazy"/>
+          <div class="robot-badge">Manufacturing</div>
+        </div>
+        <div class="robot-card-body">
+          <h3>NX-Arm Pro</h3>
+          <p>6-axis industrial arm with AI vision. 12kg payload. 0.02mm repeatability.</p>
+          <a href="robots.html" class="card-link">View Specs →</a>
+        </div>
+      </div>
+      <div class="robot-card">
+        <div class="robot-card-img">
+          <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&h=300&fit=crop&auto=format" alt="Autonomous mobile robot" loading="lazy"/>
+          <div class="robot-badge">Logistics</div>
+        </div>
+        <div class="robot-card-body">
+          <h3>SwiftBot AMR</h3>
+          <p>Autonomous mobile robot for warehouse navigation. 150kg capacity. SLAM navigation.</p>
+          <a href="robots.html" class="card-link">View Specs →</a>
+        </div>
+      </div>
+      <div class="robot-card">
+        <div class="robot-card-img">
+          <img src="https://images.unsplash.com/photo-1473968512647-3e447244af8f?w=400&h=300&fit=crop&auto=format" alt="Agricultural drone" loading="lazy"/>
+          <div class="robot-badge">Agriculture</div>
+        </div>
+        <div class="robot-card-body">
+          <h3>AgroVision Drone</h3>
+          <p>Multi-spectral crop monitoring drone with AI disease detection and precision spray.</p>
+          <a href="robots.html" class="card-link">View Specs →</a>
+        </div>
+      </div>
+    </div>
+    <div class="center-cta">
+      <a href="robots.html" class="btn-primary">View All Robots</a>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section class="education-teaser">
+  <div class="container">
+    <div class="edu-inner">
+      <div class="edu-text">
+        <div class="section-tag">Learning & Development</div>
+        <h2>Train the Next Generation of <span class="gradient-text">Robotics Engineers</span></h2>
+        <p>Our RoboNexus Education platform brings AI and robotics learning to schools, universities, and workforce training centres. Hands-on robots, curriculum kits, and cloud simulation tools.</p>
+        <div class="edu-badges">
+          <span>K-12 Programs</span>
+          <span>University Curriculum</span>
+          <span>Professional Training</span>
+          <span>Online Simulator</span>
+        </div>
+        <a href="education.html" class="btn-ghost">Explore Education →</a>
+      </div>
+      <div class="edu-img">
+        <img src="https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?w=600&h=400&fit=crop&auto=format" alt="Students learning robotics" loading="lazy"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Client Stories</div>
+      <h2>Trusted by <span class="gradient-text">Industry Leaders</span></h2>
+    </div>
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <div class="quote-icon">"</div>
+        <p>Deploying NX-Arm Pro reduced our assembly defect rate by 94%. The AI vision system catches micro-cracks invisible to the human eye.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background:#6C63FF">MR</div>
+          <div>
+            <strong>Maria Reyes</strong>
+            <span>VP Operations, AutoForge Inc.</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="quote-icon">"</div>
+        <p>SwiftBot AMRs handle our peak season with zero staff increases. Order processing time dropped from 4 hours to 45 minutes.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background:#00d4ff">JK</div>
+          <div>
+            <strong>James Kim</strong>
+            <span>Director of Logistics, GlobalShip</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="quote-icon">"</div>
+        <p>AgroVision drones cut our pesticide use by 60% while improving crop health scores. ROI in under a year.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background:#00c48c">SL</div>
+          <div>
+            <strong>Sophie Laurent</strong>
+            <span>Head of Innovation, HarvestCo</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section class="cta-banner">
+  <div class="container">
+    <div class="cta-inner">
+      <h2>Ready to Automate the <span class="gradient-text">Impossible?</span></h2>
+      <p>Get a customised robotics roadmap for your industry. Free 30-minute consultation with our engineers.</p>
+      <div class="cta-btns">
+        <a href="contact.html" class="btn-primary">Book a Free Demo</a>
+        <a href="solutions.html" class="btn-ghost">Browse Solutions</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <div class="logo-icon">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+              <circle cx="18" cy="18" r="17" stroke="#6C63FF" stroke-width="1.5"/>
+              <circle cx="18" cy="9" r="2.5" fill="#6C63FF"/>
+              <circle cx="27" cy="18" r="2.5" fill="#6C63FF" opacity="0.6"/>
+              <circle cx="18" cy="27" r="2.5" fill="#6C63FF" opacity="0.4"/>
+              <circle cx="9" cy="18" r="2.5" fill="#6C63FF" opacity="0.8"/>
+            </svg>
+          </div>
+          <span class="logo-text">RoboNexus</span>
+        </a>
+        <p>Intelligent robotics solutions that empower industries to operate safer, faster, and smarter.</p>
+        <div class="social-links">
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="Twitter">𝕏</a>
+          <a href="#" aria-label="YouTube">▶</a>
+          <a href="#" aria-label="GitHub">⌥</a>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Solutions</h4>
+          <ul>
+            <li><a href="solutions.html#manufacturing">Manufacturing</a></li>
+            <li><a href="solutions.html#healthcare">Healthcare</a></li>
+            <li><a href="solutions.html#logistics">Logistics</a></li>
+            <li><a href="solutions.html#agriculture">Agriculture</a></li>
+            <li><a href="solutions.html#construction">Construction</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Products</h4>
+          <ul>
+            <li><a href="robots.html">Robot Catalog</a></li>
+            <li><a href="ai-tech.html">NexusAI Platform</a></li>
+            <li><a href="robots.html">Accessories</a></li>
+            <li><a href="education.html">Edu Kits</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="about.html#team">Team</a></li>
+            <li><a href="about.html#careers">Careers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="education.html">Documentation</a></li>
+            <li><a href="education.html">API Reference</a></li>
+            <li><a href="about.html">Blog</a></li>
+            <li><a href="contact.html">Support</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 RoboNexus Technologies. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookie Settings</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

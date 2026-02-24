@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Robots — RoboNexus</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    .filter-bar { display:flex; gap:12px; flex-wrap:wrap; justify-content:center; margin-bottom:48px; }
+    .filter-btn { background:var(--surface); border:1px solid var(--border); color:var(--text-muted); padding:8px 20px; border-radius:20px; font-family:var(--font-mono); font-size:12px; letter-spacing:0.05em; cursor:pointer; transition:all 0.2s; }
+    .filter-btn.active, .filter-btn:hover { background:var(--accent); border-color:var(--accent); color:#fff; }
+    .robot-spec-card { background:var(--bg2); border:1px solid var(--border); border-radius:16px; overflow:hidden; transition:all 0.3s; }
+    .robot-spec-card:hover { border-color:var(--accent); transform:translateY(-4px); box-shadow:0 16px 48px rgba(108,99,255,0.15); }
+    .rsc-img { height:200px; overflow:hidden; position:relative; }
+    .rsc-img img { width:100%; height:100%; object-fit:cover; transition:transform 0.4s; }
+    .robot-spec-card:hover .rsc-img img { transform:scale(1.05); }
+    .rsc-tag { position:absolute; top:12px; left:12px; background:rgba(6,6,17,0.85); border:1px solid var(--accent); color:var(--accent); font-family:var(--font-mono); font-size:10px; letter-spacing:0.1em; text-transform:uppercase; padding:4px 10px; border-radius:4px; }
+    .rsc-body { padding:24px; }
+    .rsc-body h3 { font-family:var(--font-head); font-size:18px; font-weight:600; margin-bottom:8px; }
+    .rsc-body p { color:var(--text-muted); font-size:14px; margin-bottom:16px; }
+    .rsc-specs { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-bottom:16px; }
+    .rsc-spec { background:var(--bg3); border:1px solid var(--border); border-radius:6px; padding:8px 12px; }
+    .rsc-spec .spec-key { font-family:var(--font-mono); font-size:10px; letter-spacing:0.05em; color:var(--text-muted); text-transform:uppercase; }
+    .rsc-spec .spec-val { font-size:14px; font-weight:600; color:var(--accent); margin-top:2px; }
+    .robots-full-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:28px; }
+    @media(max-width:900px){ .robots-full-grid{grid-template-columns:repeat(2,1fr);} }
+    @media(max-width:560px){ .robots-full-grid{grid-template-columns:1fr;} }
+  </style>
+</head>
+<body>
+
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-icon"><svg width="36" height="36" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="18" r="17" stroke="#6C63FF" stroke-width="1.5"/><circle cx="18" cy="9" r="2.5" fill="#6C63FF"/><circle cx="27" cy="18" r="2.5" fill="#6C63FF" opacity="0.6"/><circle cx="18" cy="27" r="2.5" fill="#6C63FF" opacity="0.4"/><circle cx="9" cy="18" r="2.5" fill="#6C63FF" opacity="0.8"/></svg></div>
+      <span class="logo-text">RoboNexus</span>
+    </a>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown"><a href="solutions.html">Solutions ▾</a><ul class="dropdown-menu"><li><a href="solutions.html#manufacturing">Manufacturing</a></li><li><a href="solutions.html#healthcare">Healthcare</a></li><li><a href="solutions.html#logistics">Logistics</a></li><li><a href="solutions.html#agriculture">Agriculture</a></li><li><a href="solutions.html#construction">Construction</a></li></ul></li>
+      <li><a href="robots.html" class="active">Our Robots</a></li>
+      <li><a href="ai-tech.html">AI Technology</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="contact.html" class="nav-cta">Get Demo</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-content">
+    <div class="section-tag">Robot Catalog</div>
+    <h1>The <span class="gradient-text">Robot Fleet</span></h1>
+    <p>Every robot in our lineup is purpose-built, AI-native, and designed for real-world industrial deployment — not lab demos.</p>
+  </div>
+</div>
+
+<section style="padding:80px 0; background:var(--bg);">
+  <div class="container">
+    <div class="filter-bar">
+      <button class="filter-btn active">All Robots</button>
+      <button class="filter-btn">Manufacturing</button>
+      <button class="filter-btn">Logistics</button>
+      <button class="filter-btn">Healthcare</button>
+      <button class="filter-btn">Agriculture</button>
+      <button class="filter-btn">Construction</button>
+      <button class="filter-btn">Energy</button>
+    </div>
+
+    <div class="robots-full-grid">
+
+      <div class="robot-spec-card">
+        <div class="rsc-img">
+          <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=200&fit=crop&auto=format" alt="NX-Arm Pro" loading="lazy"/>
+          <div class="rsc-tag">Manufacturing</div>
+        </div>
+        <div class="rsc-body">
+          <h3>NX-Arm Pro</h3>
+          <p>6-axis articulated robotic arm with integrated AI vision for assembly, welding, and inspection tasks.</p>
+          <div class="rsc-specs">
+            <div class="rsc-spec"><div class="spec-key">Payload</div><div class="spec-val">12 kg</div></div>
+            <div class="rsc-spec"><div class="spec-key">Reach</div><div class="spec-val">1,440 mm</div></div>
+            <div class="rsc-spec"><div class="spec-key">Repeatability</div><div class="spec-val">±0.02 mm</div></div>
+            <div class="rsc-spec"><div class="spec-key">Speed</div><div class="spec-val">3.2 m/s</div></div>
+          </div>
+          <a href="contact.html" class="btn-primary" style="font-size:12px;padding:10px 20px;">Request Quote</a>
+        </div>
+      </div>
+
+      <div class="robot-spec-card">
+        <div class="rsc-img">
+          <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&h=200&fit=crop&auto=format" alt="SwiftBot AMR" loading="lazy"/>
+          <div class="rsc-tag">Logistics</div>
+        </div>
+        <div class="rsc-body">
+          <h3>SwiftBot AMR</h3>
+          <p>Autonomous Mobile Robot for warehouse navigation, order picking, and goods transport.</p>
+          <div class="rsc-specs">
+            <div class="rsc-spec"><div class="spec-key">Capacity</div><div class="spec-val">150 kg</div></div>
+            <div class="rsc-spec"><div class="spec-key">Speed</div><div class="spec-val">1.8 m/s</div></div>
+            <div class="rsc-spec"><div class="spec-key">Battery</div><div class="spec-val">10h runtime</div></div>
+            <div class="rsc-spec"><div class="spec-key">Nav</div><div class="spec-val">SLAM + AI</div></div>
+          </div>
+          <a href="contact.html" class="btn-primary" style="font-size:12px;padding:10px 20px;">Request Quote</a>
+        </div>
+      </div>
+
+      <div class="robot-spec-card">
+        <div class="rsc-img">
+          <img src="https://images.unsplash.com/photo-1473968512647-3e447244af8f?w=400&h=200&fit=crop&auto=format" alt="AgroVision Drone" loading="lazy"/>
+          <div class="rsc-tag">Agriculture</div>
+        </div>
+        <div class="rsc-body">
+          <h3>AgroVision Drone</h3>
+          <p>Multi-spectral agricultural drone with AI crop analysis, precision spray, and autonomous flight planning.</p>
+          <div class="rsc-specs">
+            <div class="rsc-spec"><div class="spec-key">Coverage</div><div class="spec-val">40 ha/hr</div></div>
+            <div class="rsc-spec"><div class="spec-key">Tank</div><div class="spec-val">20L spray</div></div>
+            <div class="rsc-spec"><div class="spec-key">Sensors</div><div class="spec-val">6-band MSi</div></div>
+            <div class="rsc-spec"><div class="spec-key">Autonomy</div><div class="spec-val">Full auto</div></div>
+          </div>
+          <a href="contact.html" class="btn-primary" style="font-size:12px;padding:10px 20px;">Request Quote</a>
+        </div>
+      </div>
+
+      <div class="robot-spec-card">
+        <div class="rsc-img">
+          <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=200&fit=crop&auto=format" alt="MediBot Assist" loading="lazy"/>
+          <div class="rsc-tag">Healthcare</div>
+        </div>
+        <div class="rsc-body">
+          <h3>MediBot Assist</h3>
+          <p>Surgical assistance robot with tremor cancellation, haptic feedback, and sub-millimetre precision for minimally invasive procedures.</p>
+          <div class="rsc-specs">
+            <div class="rsc-spec"><div class="spec-key">Precision</div><div class="spec-val">±0.1 mm</div></div>
+            <div class="rsc-spec"><div class="spec-key">DoF</div><div class="spec-val">7 axes</div></div>
+            <div class="rsc-spec"><div class="spec-key">Latency</div><div class="spec-val">&lt;3 ms</div></div>
+            <div class="rsc-spec"><div class="spec-key">Haptics</div><div class="spec-val">Force+Touch</div></div>
+          </div>
+          <a href="contact.html" class="btn-primary" style="font-size:12px;padding:10px 20px;">Request Quote</a>
+        </div>
+      </div>
+
+      <div class="robot-spec-card">
+        <div class="rsc-img">
+          <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=400&h=200&fit=crop&auto=format" alt="BuildBot Layer" loading="lazy"/>
+          <div class="rsc-tag">Construction</div>
+        </div>
+        <div class="rsc-body">
+          <h3>BuildBot Layer</h3>
+          <p>Autonomous bricklaying and concrete extrusion robot capable of following BIM blueprints directly from cloud.</p>
+          <div class="rsc-specs">
+            <div class="rsc-spec"><div class="spec-key">Speed</div><div class="spec-val">1,000 bricks/hr</div></div>
+            <div class="rsc-spec"><div class="spec-key">Accuracy</div><div class="spec-val">±2 mm</div></div>
+            <div class="rsc-spec"><div class="spec-key">Weight</div><div class="spec-val">1,800 kg</div></div>
+            <div class="rsc-spec"><div class="spec-key">Power</div><div class="spec-val">Electric/Diesel</div></div>
+          </div>
+          <a href="contact.html" class="btn-primary" style="font-size:12px;padding:10px 20px;">Request Quote</a>
+        </div>
+      </div>
+
+      <div class="robot-spec-card">
+        <div class="rsc-img">
+          <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=400&h=200&fit=crop&auto=format" alt="InspectBot X" loading="lazy"/>
+          <div class="rsc-tag">Energy</div>
+        </div>
+        <div class="rsc-body">
+          <h3>InspectBot X</h3>
+          <p>Compact crawling inspection robot for pipelines, confined spaces, and hazardous energy infrastructure.</p>
+          <div class="rsc-specs">
+            <div class="rsc-spec"><div class="spec-key">Diameter</div><div class="spec-val">150mm pipe</div></div>
+            <div class="rsc-spec"><div class="spec-key">Range</div><div class="spec-val">500m tether</div></div>
+            <div class="rsc-spec"><div class="spec-key">Sensors</div><div class="spec-val">Thermal+Gas</div></div>
+            <div class="rsc-spec"><div class="spec-key">IP Rating</div><div class="spec-val">IP68</div></div>
+          </div>
+          <a href="contact.html" class="btn-primary" style="font-size:12px;padding:10px 20px;">Request Quote</a>
+        </div>
+      </div>
+
+      <div class="robot-spec-card">
+        <div class="rsc-img">
+          <img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=400&h=200&fit=crop&auto=format" alt="FlexPick Vision" loading="lazy"/>
+          <div class="rsc-tag">Manufacturing</div>
+        </div>
+        <div class="rsc-body">
+          <h3>FlexPick Vision</h3>
+          <p>High-speed delta robot for pick-and-place operations with AI vision to handle random orientation and mixed SKUs.</p>
+          <div class="rsc-specs">
+            <div class="rsc-spec"><div class="spec-key">Cycles</div><div class="spec-val">200/min</div></div>
+            <div class="rsc-spec"><div class="spec-key">Payload</div><div class="spec-val">3 kg</div></div>
+            <div class="rsc-spec"><div class="spec-key">Vision</div><div class="spec-val">6D Pose AI</div></div>
+            <div class="rsc-spec"><div class="spec-key">Footprint</div><div class="spec-val">800mm dia.</div></div>
+          </div>
+          <a href="contact.html" class="btn-primary" style="font-size:12px;padding:10px 20px;">Request Quote</a>
+        </div>
+      </div>
+
+      <div class="robot-spec-card">
+        <div class="rsc-img">
+          <img src="https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?w=400&h=200&fit=crop&auto=format" alt="EduBot Spark" loading="lazy"/>
+          <div class="rsc-tag">Education</div>
+        </div>
+        <div class="rsc-body">
+          <h3>EduBot Spark</h3>
+          <p>Modular educational robot for K-12 and university STEM programs. Programmable in Python, Scratch, and ROS.</p>
+          <div class="rsc-specs">
+            <div class="rsc-spec"><div class="spec-key">Age Range</div><div class="spec-val">8–18 yrs</div></div>
+            <div class="rsc-spec"><div class="spec-key">Languages</div><div class="spec-val">Python/ROS</div></div>
+            <div class="rsc-spec"><div class="spec-key">Modules</div><div class="spec-val">48 types</div></div>
+            <div class="rsc-spec"><div class="spec-key">Battery</div><div class="spec-val">6h runtime</div></div>
+          </div>
+          <a href="contact.html" class="btn-primary" style="font-size:12px;padding:10px 20px;">Request Quote</a>
+        </div>
+      </div>
+
+      <div class="robot-spec-card">
+        <div class="rsc-img">
+          <img src="https://images.unsplash.com/photo-1623282033815-40b05d96c903?w=400&h=200&fit=crop&auto=format" alt="HarvestMate GT" loading="lazy"/>
+          <div class="rsc-tag">Agriculture</div>
+        </div>
+        <div class="rsc-body">
+          <h3>HarvestMate GT</h3>
+          <p>Ground-based robotic harvester for strawberries, tomatoes, and delicate fruits using AI ripeness detection.</p>
+          <div class="rsc-specs">
+            <div class="rsc-spec"><div class="spec-key">Speed</div><div class="spec-val">8 fruits/min</div></div>
+            <div class="rsc-spec"><div class="spec-key">Damage</div><div class="spec-val">&lt;0.1%</div></div>
+            <div class="rsc-spec"><div class="spec-key">Vision</div><div class="spec-val">RGB+NIR AI</div></div>
+            <div class="rsc-spec"><div class="spec-key">Autonomy</div><div class="spec-val">12h battery</div></div>
+          </div>
+          <a href="contact.html" class="btn-primary" style="font-size:12px;padding:10px 20px;">Request Quote</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <div class="container">
+    <div class="cta-inner">
+      <h2>Need a <span class="gradient-text">Custom Configuration?</span></h2>
+      <p>Our robotics engineers can design bespoke solutions for unique environments and requirements.</p>
+      <div class="cta-btns">
+        <a href="contact.html" class="btn-primary">Talk to an Engineer</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><div class="logo-icon"><svg width="36" height="36" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="18" r="17" stroke="#6C63FF" stroke-width="1.5"/><circle cx="18" cy="9" r="2.5" fill="#6C63FF"/><circle cx="27" cy="18" r="2.5" fill="#6C63FF" opacity="0.6"/><circle cx="18" cy="27" r="2.5" fill="#6C63FF" opacity="0.4"/><circle cx="9" cy="18" r="2.5" fill="#6C63FF" opacity="0.8"/></svg></div><span class="logo-text">RoboNexus</span></a>
+        <p>Intelligent robotics solutions that empower industries to operate safer, faster, and smarter.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col"><h4>Solutions</h4><ul><li><a href="solutions.html#manufacturing">Manufacturing</a></li><li><a href="solutions.html#healthcare">Healthcare</a></li><li><a href="solutions.html#logistics">Logistics</a></li><li><a href="solutions.html#agriculture">Agriculture</a></li></ul></div>
+        <div class="footer-col"><h4>Products</h4><ul><li><a href="robots.html">Robot Catalog</a></li><li><a href="ai-tech.html">NexusAI</a></li><li><a href="education.html">Edu Kits</a></li></ul></div>
+        <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div class="footer-col"><h4>Resources</h4><ul><li><a href="education.html">Docs</a></li><li><a href="about.html">Blog</a></li></ul></div>
+      </div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 RoboNexus Technologies.</p><div class="footer-legal"><a href="#">Privacy</a><a href="#">Terms</a></div></div>
+  </div>
+</footer>
+<script src="assets/js/main.js"></script>
+<script>
+  // Filter buttons interaction
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>

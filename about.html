@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — RoboNexus</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    .team-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:24px; }
+    @media(max-width:900px){ .team-grid{grid-template-columns:repeat(2,1fr);} }
+    @media(max-width:560px){ .team-grid{grid-template-columns:1fr;} }
+    .team-card { background:var(--bg2); border:1px solid var(--border); border-radius:16px; overflow:hidden; text-align:center; transition:all 0.3s; }
+    .team-card:hover { border-color:var(--accent); transform:translateY(-4px); }
+    .team-img { height:200px; overflow:hidden; }
+    .team-img img { width:100%; height:100%; object-fit:cover; }
+    .team-body { padding:20px; }
+    .team-body h4 { font-family:var(--font-head); font-size:15px; font-weight:600; margin-bottom:4px; }
+    .team-body .role { font-size:13px; color:var(--accent); font-family:var(--font-mono); }
+    .team-body p { font-size:13px; color:var(--text-muted); margin-top:10px; }
+    .timeline { position:relative; padding-left:40px; }
+    .timeline::before { content:''; position:absolute; left:8px; top:0; bottom:0; width:2px; background:linear-gradient(var(--accent),var(--accent2),transparent); }
+    .timeline-item { position:relative; margin-bottom:36px; }
+    .timeline-item::before { content:''; position:absolute; left:-36px; top:6px; width:12px; height:12px; background:var(--accent); border-radius:50%; border:2px solid var(--bg); box-shadow:0 0 10px var(--accent); }
+    .timeline-item .year { font-family:var(--font-mono); font-size:12px; color:var(--accent); letter-spacing:0.1em; margin-bottom:6px; }
+    .timeline-item h4 { font-family:var(--font-head); font-size:16px; font-weight:600; margin-bottom:6px; }
+    .timeline-item p { color:var(--text-muted); font-size:14px; }
+    .value-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+    @media(max-width:768px){ .value-grid{grid-template-columns:1fr;} }
+    .value-card { background:var(--bg2); border:1px solid var(--border); border-radius:12px; padding:28px; }
+    .value-card .v-icon { font-size:32px; margin-bottom:12px; }
+    .value-card h4 { font-family:var(--font-head); font-size:15px; font-weight:600; margin-bottom:8px; }
+    .value-card p { color:var(--text-muted); font-size:14px; line-height:1.6; }
+    .partner-logos { display:flex; flex-wrap:wrap; gap:20px; align-items:center; justify-content:center; }
+    .partner-logo { background:var(--bg2); border:1px solid var(--border); border-radius:10px; padding:16px 28px; font-family:var(--font-head); font-size:14px; color:var(--text-muted); font-weight:600; }
+  </style>
+</head>
+<body>
+
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-icon"><svg width="36" height="36" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="18" r="17" stroke="#6C63FF" stroke-width="1.5"/><circle cx="18" cy="9" r="2.5" fill="#6C63FF"/><circle cx="27" cy="18" r="2.5" fill="#6C63FF" opacity="0.6"/><circle cx="18" cy="27" r="2.5" fill="#6C63FF" opacity="0.4"/><circle cx="9" cy="18" r="2.5" fill="#6C63FF" opacity="0.8"/></svg></div>
+      <span class="logo-text">RoboNexus</span>
+    </a>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown"><a href="solutions.html">Solutions ▾</a><ul class="dropdown-menu"><li><a href="solutions.html#manufacturing">Manufacturing</a></li><li><a href="solutions.html#healthcare">Healthcare</a></li></ul></li>
+      <li><a href="robots.html">Our Robots</a></li>
+      <li><a href="ai-tech.html">AI Technology</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="contact.html" class="nav-cta">Get Demo</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-content">
+    <div class="section-tag">Our Story</div>
+    <h1>We Believe <span class="gradient-text">Robots and Humans</span> Are Better Together</h1>
+    <p>Founded in 2018, RoboNexus was built on a simple thesis: AI-powered robots should handle the work that puts humans at risk, while humans focus on what only humans can do.</p>
+  </div>
+</div>
+
+<!-- MISSION -->
+<section style="padding:80px 0; background:var(--bg);">
+  <div class="container">
+    <div class="two-col">
+      <div>
+        <div class="section-tag">Mission</div>
+        <h2>Automating Danger, <span class="gradient-text">Amplifying Human Potential</span></h2>
+        <p>Every year, millions of workers are injured performing repetitive, hazardous, or physically demanding tasks that robots can and should be doing. Our mission is to accelerate the deployment of safe, intelligent robots into every industry where human lives and wellbeing are at risk.</p>
+        <p>We don't build robots to replace people. We build robots so people no longer have to do the work that hurts them — freeing human talent for creativity, leadership, and care.</p>
+        <p>By 2030, we aim to prevent 1 million workplace injuries annually through robotic automation across our global customer base.</p>
+      </div>
+      <img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=600&h=450&fit=crop&auto=format" alt="Team working on robotics" loading="lazy"/>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section style="padding:80px 0; background:var(--bg2); border-top:1px solid var(--border);">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Values</div>
+      <h2>What We <span class="gradient-text">Stand For</span></h2>
+    </div>
+    <div class="value-grid">
+      <div class="value-card"><div class="v-icon">🛡</div><h4>Safety First</h4><p>No robot we build will ever compromise human safety. Every design decision starts with the question: how could this harm someone?</p></div>
+      <div class="value-card"><div class="v-icon">🔭</div><h4>Long-Term Thinking</h4><p>We build for decades, not quarters. Our robots are designed to be maintained, upgraded, and adapted as technology evolves.</p></div>
+      <div class="value-card"><div class="v-icon">🌍</div><h4>Responsible Automation</h4><p>We partner with customers on workforce transition planning, ensuring displaced workers are retrained for roles in the automated world.</p></div>
+      <div class="value-card"><div class="v-icon">🔬</div><h4>Science-Driven</h4><p>Every claim we make is backed by data. Every robot we ship has been tested under 10,000+ operating hours of simulation and real-world trials.</p></div>
+      <div class="value-card"><div class="v-icon">🤝</div><h4>Open Collaboration</h4><p>We publish research, open-source non-core software, and collaborate with universities to advance the entire robotics field.</p></div>
+      <div class="value-card"><div class="v-icon">♻️</div><h4>Sustainability</h4><p>All our robots use recyclable materials wherever possible. Our manufacturing facilities run on 100% renewable energy.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section style="padding:80px 0; background:var(--bg);" id="team">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">History</div>
+      <h2>Our Journey <span class="gradient-text">So Far</span></h2>
+    </div>
+    <div style="max-width:680px; margin:0 auto;">
+      <div class="timeline">
+        <div class="timeline-item"><div class="year">2018</div><h4>Founded in San Francisco</h4><p>Three robotics PhD graduates from MIT and Stanford launch RoboNexus with $4M seed funding and a 10-person team.</p></div>
+        <div class="timeline-item"><div class="year">2019</div><h4>First Industrial Deployment</h4><p>NX-Arm v1 deploys at AutoForge manufacturing facility in Detroit. 94% defect reduction in first quarter.</p></div>
+        <div class="timeline-item"><div class="year">2020</div><h4>Series A — $32M</h4><p>Expansion into logistics with SwiftBot AMR. Partnership with 3 major e-commerce fulfilment networks.</p></div>
+        <div class="timeline-item"><div class="year">2021</div><h4>NexusAI Platform Launch</h4><p>Proprietary AI stack released as unified platform across all robot lines. Fleet intelligence network goes live.</p></div>
+        <div class="timeline-item"><div class="year">2022</div><h4>Education Division</h4><p>RoboNexus Education launched. First 500 school partnerships. EduBot Spark ships to 40 countries.</p></div>
+        <div class="timeline-item"><div class="year">2023</div><h4>Series C — $180M</h4><p>Global expansion to 28 countries. 200+ employees. Agriculture and healthcare robot lines launched.</p></div>
+        <div class="timeline-item"><div class="year">2024</div><h4>NexusChip ASIC</h4><p>Custom AI chip delivers 10× efficiency improvement. 500 robots deployed across 12 industries.</p></div>
+        <div class="timeline-item"><div class="year">2025</div><h4>Today & Beyond</h4><p>1,200 employees across 6 offices. Targeting 1M robots deployed by 2028 and 1M injuries prevented by 2030.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section style="padding:80px 0; background:var(--bg2); border-top:1px solid var(--border);">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Leadership</div>
+      <h2>The Team <span class="gradient-text">Behind the Robots</span></h2>
+    </div>
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-img"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=300&h=200&fit=crop&auto=format" alt="CEO" loading="lazy"/></div>
+        <div class="team-body"><h4>Dr. Alex Chen</h4><div class="role">CEO & Co-Founder</div><p>Former MIT Robotics Lab. Pioneer in reinforcement learning for manipulation.</p></div>
+      </div>
+      <div class="team-card">
+        <div class="team-img"><img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=300&h=200&fit=crop&auto=format" alt="CTO" loading="lazy"/></div>
+        <div class="team-body"><h4>Dr. Sarah Okoye</h4><div class="role">CTO & Co-Founder</div><p>Stanford AI Lab alumna. Inventor of adaptive SLAM algorithm used in SwiftBot.</p></div>
+      </div>
+      <div class="team-card">
+        <div class="team-img"><img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=300&h=200&fit=crop&auto=format" alt="CPO" loading="lazy"/></div>
+        <div class="team-body"><h4>Marcus Webb</h4><div class="role">Chief Product Officer</div><p>Previously VP of Products at Boston Dynamics. 20 years in commercial robotics.</p></div>
+      </div>
+      <div class="team-card">
+        <div class="team-img"><img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&h=200&fit=crop&auto=format" alt="VP Education" loading="lazy"/></div>
+        <div class="team-body"><h4>Dr. Priya Sharma</h4><div class="role">VP Education</div><p>Former curriculum director at Code.org. Passionate about STEM access for underrepresented communities.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNERS -->
+<section style="padding:80px 0; background:var(--bg);">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Partners & Investors</div>
+      <h2>Backed by the <span class="gradient-text">Best</span></h2>
+    </div>
+    <div class="partner-logos">
+      <div class="partner-logo">Sequoia Capital</div>
+      <div class="partner-logo">Andreessen Horowitz</div>
+      <div class="partner-logo">Toyota Ventures</div>
+      <div class="partner-logo">Siemens Ventures</div>
+      <div class="partner-logo">DARPA Programs</div>
+      <div class="partner-logo">MIT Media Lab</div>
+      <div class="partner-logo">Stanford AI Lab</div>
+    </div>
+  </div>
+</section>
+
+<!-- CAREERS -->
+<section id="careers" style="padding:80px 0; background:var(--bg2); border-top:1px solid var(--border);">
+  <div class="container">
+    <div class="two-col">
+      <div>
+        <div class="section-tag">Careers</div>
+        <h2>Join the Team <span class="gradient-text">Building the Future</span></h2>
+        <p>We're hiring across robotics engineering, AI research, software, sales, and operations. Remote-friendly with offices in San Francisco, Berlin, Singapore, and Tokyo.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin:20px 0;">
+          <span class="tag">Robotics Engineers</span>
+          <span class="tag">ML Researchers</span>
+          <span class="tag">Software Engineers</span>
+          <span class="tag">Sales Engineers</span>
+          <span class="tag">Product Managers</span>
+        </div>
+        <a href="contact.html" class="btn-primary">See Open Roles</a>
+      </div>
+      <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop&auto=format" alt="Team working together" loading="lazy"/>
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <div class="container">
+    <div class="cta-inner">
+      <h2>Ready to Work With <span class="gradient-text">RoboNexus?</span></h2>
+      <div class="cta-btns">
+        <a href="contact.html" class="btn-primary">Contact Us</a>
+        <a href="solutions.html" class="btn-ghost">Our Solutions</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand"><a href="index.html" class="logo"><div class="logo-icon"><svg width="36" height="36" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="18" r="17" stroke="#6C63FF" stroke-width="1.5"/><circle cx="18" cy="9" r="2.5" fill="#6C63FF"/><circle cx="27" cy="18" r="2.5" fill="#6C63FF" opacity="0.6"/><circle cx="18" cy="27" r="2.5" fill="#6C63FF" opacity="0.4"/><circle cx="9" cy="18" r="2.5" fill="#6C63FF" opacity="0.8"/></svg></div><span class="logo-text">RoboNexus</span></a><p>Intelligent robotics solutions that empower industries to operate safer, faster, and smarter.</p></div>
+      <div class="footer-links">
+        <div class="footer-col"><h4>Solutions</h4><ul><li><a href="solutions.html#manufacturing">Manufacturing</a></li><li><a href="solutions.html#healthcare">Healthcare</a></li><li><a href="solutions.html#logistics">Logistics</a></li></ul></div>
+        <div class="footer-col"><h4>Products</h4><ul><li><a href="robots.html">Robot Catalog</a></li><li><a href="ai-tech.html">NexusAI</a></li><li><a href="education.html">Edu Kits</a></li></ul></div>
+        <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="about.html#team">Team</a></li><li><a href="about.html#careers">Careers</a></li></ul></div>
+        <div class="footer-col"><h4>Resources</h4><ul><li><a href="education.html">Docs</a></li><li><a href="about.html">Blog</a></li><li><a href="contact.html">Support</a></li></ul></div>
+      </div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 RoboNexus Technologies.</p><div class="footer-legal"><a href="#">Privacy</a><a href="#">Terms</a></div></div>
+  </div>
+</footer>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
